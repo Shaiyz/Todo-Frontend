@@ -62,6 +62,7 @@ const DialogForm = ({
         ))}
     </div>
   )
+  console.log(form)
 
   return (
     <Dialog open={open} onClose={onClose}>

@@ -100,7 +100,6 @@ const Formfeild = (props) => {
       )
       break
     case 'select':
-      if (props.elementConfig.name === 'toVac') {
         field = (
           <FormControlLabel
             control={
@@ -119,28 +118,7 @@ const Formfeild = (props) => {
             label={props.label}
           />
         )
-      } else {
-        field = (
-          <Select
-            variant='outlined'
-            fullWidth
-            native={true}
-            inputProps={{ ...props.elementConfig }}
-            value={props.value}
-            label={props.label}
-            required={props.required}
-            error={props.invalid}
-            helpertext={props.invalid ? props.invalidMessage : ''}
-            onChange={props.valueChanged}
-          >
-            {Object.keys(props.options).map((key) => (
-              <option key={key} value={props.options[key]}>
-                {key}
-              </option>
-            ))}
-          </Select>
-        )
-      }
+      
       break
  
   }
